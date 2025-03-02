@@ -1,0 +1,27 @@
+
+<view class="container">
+    <block wx:for="{{orders}}" wx:key="id">
+        <view class="service-item">
+            <view class="service-header">
+                <text class="service-name">{{item.serve_name}}</text>
+                <text class="status" wx:if="{{item.status != 2 && item.status!=3 && item.status!=4}}">
+                    {{item.status == 1 ? '待支付' : item.status == 2 ? '已支付' : item.status == 3 ? '进行中' : item.status == 4 ? '已完成' : item.status == 5 ? '已取消' : '未知'}}
+                </text>
+            </view>
+            <view wx:if="{{item.status == 1}}">
+                <button class="pay-button" bindtap="handlePay"  data-order_id="{{item.order_id}}">支付</button>
+            </view>
+            <view wx:if="{{item.status == 2 || item.status == 3 || item.status == 4}}">
+                <view class="progress-dots">
+                    <view class="line"></view>
+                    <view class="line-progress" style="width: {{item.status == 2 ? '2%' : item.status == 3 ? '55%' : '100%'}}"></view>
+                    <block wx:for="{{['已支付', '进行中', '已完成']}}" wx:key="*this" wx:for-item="label" wx:for-index="idx">
+                        <view class="dot {{idx < item.status - 1 ? 'dot-active' : ''}}">
+                            <text class="dot-label">{{label}}</text>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

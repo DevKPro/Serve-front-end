@@ -1,0 +1,65 @@
+<view class="container" style="padding-bottom: 60px;">
+    <view class="custom-nav" style="padding-top: {{statusBarHeight}}px">
+        <view class="nav-bar">
+            <view class="back-btn" bindtap="goBack">
+                <text class="iconfont icon-back"></text>
+            </view>
+            <view class="nav-title">预约服务</view>
+        </view>
+    </view>
+
+    <view class="booking-content">
+        <!-- 服务选择 -->
+        <view class="section">
+            <view class="section-title">选择服务</view>
+            <view class="service-list">
+                <view class="service-item {{selectedService.id === item.id ? 'selected' : ''}}"
+                      wx:for="{{services}}"
+                      wx:key="id"
+                      bindtap="selectService"
+                      data-service="{{item}}">
+                    <view class="service-info">
+                        <view class="service-name">{{item.name}}</view>
+                        <view class="service-brief">
+                            <text class="duration">约{{item.duration}}分钟</text>
+                            <text class="price">¥{{item.price}}</text>
+                        </view>
+                    </view>
+                    <text class="iconfont icon-check"></text>
+                </view>
+            </view>
+            <view class="service-details">
+                <view class="queue-info">前面排队人数: {{waitingCount}}</view>
+            </view>
+        </view>
+
+        <!-- 联系信息 -->
+        <view class="section">
+            <view class="section-title">联系信息</view>
+            <view class="form-item">
+                <text class="label">姓名</text>
+                <input type="text" placeholder="请输入姓名" model:value="{{name}}"/>
+            </view>
+            <view class="form-item">
+                <text class="label">车牌号</text>
+                <input type="text" placeholder="请输入车牌号" model:value="{{car_no}}"/>
+            </view>
+            <view class="form-item">
+                <text class="label">手机号</text>
+                <input type="number" placeholder="请输入手机号" model:value="{{phone}}"/>
+            </view>
+        </view>
+    </view>
+
+    <!-- 底部确认栏 -->
+    <view class="bottom-bar" style="position: fixed; bottom: 0; width: 100%; z-index: 1000;">
+        <view class="price-info">
+            <text>合计：</text>
+            <text class="total-price">¥{{finalPrice}}</text>
+        </view>
+<!--        <button class="confirm-btn" bindtap="submitBooking" disabled="{{!canSubmit}}">-->
+        <button class="confirm-btn" bindtap="submitBooking" disabled="{{!(selectedService && name && phone && car_no)}}">
+            确认预约
+        </button>
+    </view>
+</view>

@@ -1,0 +1,101 @@
+/* pages/index/index.wxss */
+.shop-card {
+  margin: calc(44px + env(safe-area-inset-top)) 30rpx 30rpx;
+  border-radius: 16rpx;
+  background: #fff;
+  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.shop-bg {
+  width: 100%;
+  height: 300rpx;
+}
+
+.shop-info {
+  padding: 30rpx;
+}
+
+.shop-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.shop-address, .shop-phone, .shop-time {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 16rpx;
+  display: flex;
+  align-items: center;
+}
+
+.navigate {
+  color: #1989fa;
+  margin-left: auto;
+}
+
+.booking-section {
+  padding: 0 30rpx;
+  margin-bottom: 40rpx;
+}
+
+.booking-btn {
+  background: #1989fa;
+  color: #fff;
+  font-size: 32rpx;
+  padding: 24rpx 0;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-btn text {
+  margin: 0 10rpx;
+}
+
+.service-section {
+  padding: 0 30rpx;
+  margin-bottom: 40rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30rpx;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-item image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 16rpx;
+}
+
+.gallery-section {
+  padding: 0 30rpx 40rpx;
+}
+
+.gallery-scroll {
+  white-space: nowrap;
+}
+
+.gallery-scroll image {
+  display: inline-block;
+  width: 280rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+  border-radius: 8rpx;
+}

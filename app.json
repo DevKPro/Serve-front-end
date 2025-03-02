@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/my/my",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/process/process",
+    "pages/detail/detail",
+    "pages/book/book",
+    "pages/userInfo/userInfo"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "list": [
+      {
+        "selectedIconPath": "static/icons/首页_填充.png",
+        "iconPath": "static/icons/首页.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "static/icons/物流_填充.png",
+        "iconPath": "static/icons/物流.png",
+        "pagePath": "pages/book/book",
+        "text": "预约"
+      },
+      {
+        "selectedIconPath": "static/icons/物流_填充.png",
+        "iconPath": "static/icons/物流.png",
+        "pagePath": "pages/process/process",
+        "text": "进度"
+      },
+      {
+        "selectedIconPath": "static/icons/用户_填充.png",
+        "iconPath": "static/icons/用户.png",
+        "pagePath": "pages/my/my",
+        "text": "用户"
+      }
+    ]
+  }
+
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "浩顺养车",
+  "enablePullDownRefresh": true,
+  "navigationStyle": "custom"
+}

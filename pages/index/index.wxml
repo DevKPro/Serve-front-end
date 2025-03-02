@@ -1,0 +1,48 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <view class="custom-nav" style="padding-top: {{statusBarHeight}}px">
+    <view class="nav-title">XXXX</view>
+  </view>
+
+  <!-- 店铺信息卡片 -->
+  <view class="shop-card">
+    <image class="shop-bg" src="../../static/images/shop-bg.png" mode="aspectFill"></image>
+    <view class="shop-info">
+      <view class="shop-name">XXXX服务中心</view>
+      <view class="shop-address" bindtap="openLocation">
+        <text class="iconfont icon-location"></text>
+        <text>广东省xx市xx区xxx</text>
+        <text class="navigate">导航</text>
+      </view>
+      <view class="shop-phone" bindtap="makePhoneCall">
+        <text class="iconfont icon-phone"></text>
+        <text>联系电话：010-12345678</text>
+      </view>
+      <view class="shop-time">
+        <text class="iconfont icon-time"></text>
+        <text>营业时间：09:00-21:00</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 预约入口 -->
+  <view class="booking-section">
+    <button class="booking-btn" bindtap="goToBooking">
+      <text class="iconfont icon-calendar"></text>
+      <text>立即预约</text>
+    </button>
+  </view>
+
+  <!-- 店铺环境展示 -->
+  <view class="gallery-section">
+    <view class="section-title">店铺环境</view>
+    <scroll-view scroll-x class="gallery-scroll">
+      <image wx:for="{{shopImages}}"
+             wx:key="*this"
+             src="{{item}}"
+             mode="aspectFill"
+             bindtap="previewImage"
+             data-url="{{item}}"></image>
+    </scroll-view>
+  </view>
+</view>

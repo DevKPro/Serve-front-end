@@ -1,0 +1,42 @@
+<!--pages/jiaocheng/jiaocheng.wxml-->
+<view class='container'>
+	<!-- 第1部分 -->
+	<view class='top-container'>
+		<!-- <image class='bg-img' src='../../static/images/backmy.png'></image> -->
+    <image class="avatar" src="{{avatarUrl}}"></image>
+	</view>
+
+	<!-- 第3部分 -->
+	<view class='container_3'>
+		<view class='middle-item' hover-stay-time="150">
+			<image class="image_1" src="../../static/icons/二维码.png"></image>
+			<text class='text_2'>扫一扫</text>
+			<image class="image-jiantou" src="../../static/icons/扫一扫.png"></image>
+		</view>
+	</view>
+
+	<!-- 第4部分 -->
+	<view class='container_4'>
+		<view class='middle-item' hover-stay-time="150">
+			<image class="image_tupian_1" src="../../static/icons/设置.png"></image>
+			<text class='text_2'>设置</text>
+			<image class="image-jiantou" src="../../static/icons/箭头.png"></image>
+		</view>
+
+		<view class="view_line"></view>
+
+		<view class='middle-item' hover-class="opcity" hover-stay-time="150" bindtap="navigateToUserInfo">
+			<image class="image_tupian_1" src="../../static/icons/开心.png"></image>
+			<text class='text_2'>个人信息</text>
+			<image class="image-jiantou" src="../../static/icons/箭头.png"></image>
+		</view>
+
+		<view class="view_line"></view>
+
+		<view class='middle-item' hover-class="opcity" hover-stay-time="150">
+			<image class="image_tupian_1" src="../../static/icons/清单.png"></image>
+			<text class='text_2'>消费记录</text>
+			<image class="image-jiantou" src="../../static/icons/箭头.png"></image>
+		</view>
+	</view>
+</view>

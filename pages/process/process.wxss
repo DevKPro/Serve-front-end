@@ -1,0 +1,74 @@
+.container {
+    padding: 20px 15px;
+}
+
+.service-item {
+    background: #fff;
+    width: 90%;
+    padding: 20px 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.progress-dots {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 30px auto 25px;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    right: 8%;
+    height: 2px;
+    background: #e9ecef;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.line-progress {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    height: 2px;
+    background: #3498db;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: width 0.3s ease;
+}
+
+.dot {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2.5px solid #e9ecef;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.dot-active {
+    background: #3498db;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+.dot-label {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    color: #666;
+    white-space: nowrap;
+}
+
+.service-header {
+    padding: 0 10px;
+}

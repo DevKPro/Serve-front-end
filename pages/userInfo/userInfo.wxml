@@ -1,0 +1,15 @@
+<view class="container">
+    <view class="form-item">
+        <text>姓名：</text>
+        <input type="text" placeholder="请输入姓名" bindinput="onNameInput" />
+    </view>
+    <view class="form-item">
+        <text>车牌号：</text>
+        <input type="text" placeholder="请输入车牌号" bindinput="onCarNoInput" />
+    </view>
+    <view class="form-item">
+        <text>手机号：</text>
+        <input type="text" placeholder="请输入手机号" bindinput="onPhoneInput" />
+    </view>
+    <button bindtap="onSubmit">提交</button>
+</view>

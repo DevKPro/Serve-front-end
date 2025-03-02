@@ -1,0 +1,58 @@
+.container {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.top-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.container_3, .container_4 {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 90%; /* Adjusted width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.middle-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.middle-item .image_1, .middle-item .image_tupian_1 {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.middle-item .text_2 {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+}
+
+.middle-item .image-jiantou {
+  width: 20px;
+  height: 20px;
+}
+
+.view_line {
+  height: 1px;
+  background-color: #eee;
+  margin: 10px 0;
+}
